@@ -1,0 +1,5 @@
+@file:Import("data/SharedClass.kts")
+println(SharedClass.TestClass("Usage from import"))
+println(c)
+println(a)
+SharedClass.TestClass("Usage from return")

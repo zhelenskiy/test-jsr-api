@@ -1,0 +1,42 @@
+
+grant codeBase "file:/home/zhelenskiy/IdeaProjects/test-jsr-api/build/classes/kotlin/-" {
+  permission java.security.AllPermission;
+};
+grant codeBase "file:/home/zhelenskiy/.gradle/-" {
+  permission java.security.AllPermission;
+};
+grant codeBase "file:/home/zhelenskiy/.jdks/-" {
+  permission java.security.AllPermission;
+};
+grant codeBase "file:/home/zhelenskiy/IdeaProjects/test-jsr-api/build/classes/java/-" {
+  //permission java.security.AllPermission;
+  //permission java.io.FilePermission "<<ALL FILES>>", "read";//change
+  permission java.io.FilePermission "/dev/*", "read";
+  permission java.io.FilePermission "/snap/intellij-idea-ultimate/245/lib/idea_rt.jar", "read,write";
+  permission java.io.FilePermission "/home/zhelenskiy/IdeaProjects/test-jsr-api/data/-", "read,write";
+  permission java.io.FilePermission "/home/zhelenskiy/IdeaProjects/test-jsr-api/build/classes/-", "read";
+  permission java.io.FilePermission "/home/zhelenskiy/.gradle/-", "read,write";
+  permission java.io.FilePermission "/home/zhelenskiy/.jdks/-", "read";
+
+  //permission java.io.FilePermission "/home/zhelenskiy/.cache", "read";
+  //permission java.io.FilePermission "/home/zhelenskiy/.cache/-", "read,write";
+
+  permission java.io.FilePermission "/home/zhelenskiy/IdeaProjects/test-jsr-api/.cache/-", "read,write";
+  permission java.io.FilePermission "/home/zhelenskiy/IdeaProjects/test-jsr-api/.cache", "read,write";
+
+  //permission java.io.FilePermission "/home/zhelenskiy/.local/-", "read";
+  //permission java.io.FilePermission "/home/zhelenskiy/.m2/-", "read";
+  //permission java.lang.RuntimePermission "*";
+  permission java.lang.RuntimePermission "createClassLoader";
+  permission java.lang.RuntimePermission "getClassLoader";
+  permission java.lang.RuntimePermission "setContextClassLoader";
+  permission java.lang.RuntimePermission "accessDeclaredMembers";
+  permission java.lang.RuntimePermission "getenv.*";
+  permission java.lang.RuntimePermission "accessClassInPackage.*";
+  permission java.lang.RuntimePermission "accessSystemModules";
+  permission java.lang.RuntimePermission "fileSystemProvider";
+  permission java.lang.RuntimePermission "accessUserInformation";
+  permission java.lang.reflect.ReflectPermission "suppressAccessChecks";
+
+  permission java.util.PropertyPermission "*", "read,write";
+};
